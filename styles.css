@@ -1,0 +1,19 @@
+h1{
+color:fuchsia;    
+font-size: 50px;
+font-family: fantasy
+}
+h2{
+    color: deeppink;
+    font-family: fantasy;
+}
+p{
+    color: #fc65e3;
+}
+.first_para{
+    color: #8ee8ac;
+}
+img{
+    height: 100px;
+    width: 100px
+}
