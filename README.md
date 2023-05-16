@@ -5,7 +5,7 @@
   <title>Ai Advantages</title>
 </head>
 <body>
-  <h1>Welcome to My Website</h1>
+  <h1>Advantages of AI art</h1>
     <link rel="stylesheet" href="style.css">
   
   <p>Advetages of AI art
