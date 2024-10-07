@@ -6,8 +6,8 @@
     <title>My HTML Page</title>
 </head>
 <body>
-    <h1>This is a Heading</h1>
-    <p>This is a paragraph describing the content.</p>
+    <h1>Hello World!</h1>
+    <p>This is an updated version of my GitHub Pages site.</p>
     <ul>
         <li>List Item 1</li>
         <li>List Item 2</li>
