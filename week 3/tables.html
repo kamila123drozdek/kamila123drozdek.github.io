@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 3 - HTML Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        img {
+            width: 150px;
+            height: auto;
+        }
+        .info-link {
+            color: purple;
+            text-decoration: none;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Experiment 3 - HTML Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Photo</th>
+                <th>Dog Breed</th>
+                <th>Size</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="beagle.jpg" alt="Beagle"></td>
+                <td>Beagle</td>
+                <td>2</td>
+                <td><a href="#" class="info-link">More Info</a></td>
+            </tr>
+            <tr>
+                <td><img src="boxer.jpg" alt="Boxer"></td>
+                <td>Boxer</td>
+                <td>3</td>
+                <td><a href="#" class="info-link">More Info</a></td>
+            </tr>
+            <tr>
+                <td><img src="gershep.jpg" alt="German Shepherd"></td>
+                <td>German Shepherd</td>
+                <td>4</td>
+                <td><a href="#" class="info-link">More Info</a></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>
