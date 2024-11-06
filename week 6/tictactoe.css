@@ -1,0 +1,29 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+table {
+    border-collapse: collapse;
+}
+
+
+td {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 24px;
+}
+
+
+td:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
