@@ -31,8 +31,18 @@ td {
 }
 
 
-tr td:first-child {
+tr:first-child td { 
+    border-top: none;
+}
+
+tr:last-child td { 
+    border-bottom: none;
+}
+
+tr td:first-child { 
     border-left: none;
 }
 
-
+tr td:last-child { 
+    border-right: none;
+}
