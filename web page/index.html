@@ -29,8 +29,8 @@
 
         /* Spectra Text Styling */
         .fullscreen h1 {
-            font-size: 11rem;
-            letter-spacing: 13px;
+            font-size: 7rem;
+            letter-spacing: 10px;
             text-transform: uppercase;
             font-weight: bold;
             margin: 0;
@@ -242,6 +242,59 @@
         .artists-text p {
             font-size: 1.2rem;
             line-height: 1.5;
+        }
+
+        /* Responsive Media Query for Small Devices */
+        @media (max-width: 768px) {
+            /* Fullscreen Section */
+            .fullscreen h1 {
+                font-size: 4rem;
+                letter-spacing: 5px;
+            }
+
+            /* Navbar Adjustments */
+            .navbar {
+                padding: 5px;
+            }
+
+            .navbar-toggler-icon {
+                width: 25px;
+                height: 3px;
+            }
+
+            /* About Section */
+            #about {
+                flex-direction: column; /* Stack elements vertically */
+            }
+
+            #about .about-text, 
+            #about .photo-gallery {
+                max-width: 100%; /* Full width */
+                text-align: center;
+            }
+
+            /* Artists Section */
+            #artists {
+                flex-direction: column; /* Stack columns and text */
+            }
+
+            .artists-gallery {
+                flex-wrap: wrap; /* Wrap columns to the next line */
+            }
+
+            .column {
+                max-width: 100%; /* Full width for each column */
+                flex-direction: row; /* Horizontal alignment for rectangles */
+            }
+
+            .rectangle {
+                height: 100px; /* Smaller rectangles */
+            }
+
+            .artists-text {
+                margin-left: 0; /* Remove extra spacing */
+                text-align: center;
+            }
         }
     </style>
 </head>
