@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPONSORS</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: black; /* Black background */
+            color: white; /* White text */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            margin: 20px 0;
+            font-size: 3rem;
+            letter-spacing: 2px;
+        }
+
+        .sponsor-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .sponsor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: 2px solid #e7e4d1; /* Beige stroke */
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .sponsor:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 5px 15px rgba(231, 228, 209, 0.5);
+        }
+
+        .sponsor img {
+            max-width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .sponsor img.invert {
+            filter: invert(100%); /* Converts logo to white */
+        }
+
+        .sponsor p {
+            font-size: 1.2rem;
+            color: #e7e4d1; /* Beige text */
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sponsors</h1>
+    <div class="sponsor-container">
+        <a href="https://www.nikon.com" target="_blank" class="sponsor">
+            <img src="nikon.png" alt="Nikon" class="invert">
+            
+        </a>
+        <a href="https://www.canon.com" target="_blank" class="sponsor">
+            <img src="canon.png" alt="Canon" class="invert">
+            
+        </a>
+        <a href="https://www.qualitypostform.com/en/home.htm" target="_blank" class="sponsor">
+            <img src="quality.png" alt="Quality">
+            
+        </a>
+        <a href="https://www.um.edu.mt/maks/" target="_blank" class="sponsor">
+            <img src="maks.png" alt="Maks">
+            
+        </a>
+        <a href="https://cultureventure.org/" target="_blank" class="sponsor">
+            <img src="culture.png" alt="Culture" class="invert">
+            
+        </a>
+    </div>
+</body>
+</html>

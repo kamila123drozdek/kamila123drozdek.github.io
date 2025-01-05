@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #e7e4d1; /* Beige background */
+            color: #555; /* Text color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 10px;
+        }
+
+        .navbar-toggler {
+            border: none;
+            background: none;
+        }
+
+        .navbar-toggler-icon {
+            width: 30px;
+            height: 3px;
+            background-color: #555;
+            position: relative;
+            display: inline-block;
+        }
+
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after {
+            content: '';
+            width: 30px;
+            height: 3px;
+            background-color: #555;
+            position: absolute;
+            left: 0;
+        }
+
+        .navbar-toggler-icon::before {
+            top: -8px;
+        }
+
+        .navbar-toggler-icon::after {
+            bottom: -8px;
+        }
+
+        .navbar-collapse {
+            position: absolute;
+            top: 50px;
+            right: 10px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #555 !important;
+            font-size: 1rem;
+            text-align: left;
+            padding: 5px 10px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-link:hover {
+            color: black;
+        }
+
+        h1 {
+            margin: 100px 0 20px 0; /* Adjust for the navbar */
+            font-size: 3rem;
+            letter-spacing: 2px;
+            text-align: center;
+            color: black;
+        }
+
+        .contact-container {
+            background-color: white;
+            border: 2px solid #555;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-container h2 {
+            margin: 0;
+            font-size: 2rem;
+            color: #555;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea, button {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: black;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+   
+
+    <!-- Contact Section -->
+    <h1>Contact Us</h1>
+    <div class="contact-container">
+        <h2>Get in Touch</h2>
+        <form action="mailto:spectra.exhibition@university.com" method="POST" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:spectra.exhibition@university.com">spectra.exhibition@university.com</a></p>
+            <p>Phone: +356 1234 5678</p>
+            <p>Address: University of Malta, Msida, Malta</p>
+        </div>
+    </div>
+</body>
+</html>
