@@ -134,47 +134,38 @@
         }
     
         #about .about-text {
-            flex: 1;
-            max-width: 40%;
+            flex: 1 1 100%;
+            max-width: 100%;
             text-transform: uppercase;
             font-size: 1.5rem;
-        }
-    
-        #about .about-text h2 {
-            font-size: 4rem;
-            font-weight: bold;
-            letter-spacing: 5px;
+            text-align: center;
             margin-bottom: 20px;
         }
     
-        #about .about-text p {
-            font-size: 1.2rem;
-            color: #555;
-            line-height: 1.5;
+        #about .about-text h2 {
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: 3px;
         }
     
         #about .photo-gallery {
-            flex: 1;
-            max-width: 50%;
+            flex: 1 1 100%;
+            max-width: 100%;
             position: relative;
-            height: 400px;
+            height: auto;
             overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            gap: 10px;
+            flex-wrap: wrap;
         }
     
         #about .photo-gallery img {
-            position: absolute;
             width: 100%;
-            height: 100%;
+            max-width: 300px;
+            height: auto;
             object-fit: cover;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-    
-        #about .photo-gallery img.active {
             opacity: 1;
         }
     
@@ -204,11 +195,12 @@
         }
     
         .rectangle {
-            flex: 1 1 calc(50% - 20px);
+            flex: 1 1 calc(45% - 10px);
+            max-width: 300px;
             height: auto;
             position: relative;
             overflow: hidden;
-            max-width: 200px;
+            margin-bottom: 20px;
         }
     
         .rectangle img {
@@ -216,16 +208,11 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-    
-        .rectangle img.active {
             opacity: 1;
         }
     
         .artists-text {
-            flex: 1;
+            flex: 1 1 100%;
             max-width: 100%;
             text-transform: uppercase;
             font-size: 1.5rem;
@@ -235,7 +222,7 @@
         }
     
         .artists-text h2 {
-            font-size: 4rem;
+            font-size: 3rem;
             font-weight: bold;
             letter-spacing: 5px;
             margin-bottom: 20px;
@@ -246,56 +233,20 @@
             line-height: 1.5;
         }
     
-        /* Responsive Media Query for Medium Devices */
-        @media (max-width: 1024px) {
-            .navbar-collapse {
-                position: static;
-            }
-    
-            .social-icons {
-                right: 10px;
-            }
-    
-            .fullscreen h1 {
-                font-size: 6rem;
-            }
-    
-            #about {
-                flex-direction: column;
-            }
-        }
-    
         /* Responsive Media Query for Small Devices */
         @media (max-width: 768px) {
             .fullscreen h1 {
                 font-size: 4rem;
-                letter-spacing: 5px;
+                letter-spacing: 2px;
             }
     
-            #about {
-                flex-direction: column;
-            }
-    
-            #about .about-text, #about .photo-gallery {
-                max-width: 100%;
-                text-align: center;
-            }
-    
-            #artists {
-                flex-direction: column;
-            }
-    
-            .artists-gallery {
-                flex-wrap: wrap;
+            #about .about-text h2 {
+                font-size: 2.5rem;
             }
     
             .rectangle {
-                flex: 1 1 100%;
-                height: 150px;
-            }
-    
-            .artists-text {
-                text-align: center;
+                flex: 1 1 calc(100% - 20px);
+                height: auto;
             }
     
             .social-icons img {
@@ -307,7 +258,8 @@
         /* Responsive Media Query for Extra Small Devices */
         @media (max-width: 480px) {
             .fullscreen h1 {
-                font-size: 2.5rem;
+                font-size: 3rem;
+                letter-spacing: 1px;
             }
     
             .social-icons {
@@ -316,17 +268,17 @@
                 right: 10px;
             }
     
+            .artists-text h2 {
+                font-size: 2.5rem;
+            }
+    
             .rectangle {
                 width: 100%;
-                height: 120px;
+                height: auto;
             }
     
-            #about .about-text h2 {
-                font-size: 3rem;
-            }
-    
-            #about .about-text p {
-                font-size: 1rem;
+            #about .photo-gallery img {
+                max-width: 100%;
             }
         }
     </style>
