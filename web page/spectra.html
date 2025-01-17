@@ -14,7 +14,7 @@
             font-family: 'Arial', sans-serif;
             overflow-x: hidden;
         }
-    
+
         .fullscreen {
             position: relative;
             width: 100%;
@@ -26,7 +26,7 @@
             text-align: center;
             color: white;
         }
-    
+
         .fullscreen h1 {
             font-size: 11rem;
             letter-spacing: 13px;
@@ -40,7 +40,7 @@
             color: transparent;
             animation: shimmer 3s infinite linear;
         }
-    
+
         @keyframes shimmer {
             0% {
                 background-position: -100% 0;
@@ -49,7 +49,7 @@
                 background-position: 100% 0;
             }
         }
-    
+
         .navbar {
             position: fixed;
             top: 0;
@@ -57,12 +57,12 @@
             z-index: 1000;
             padding: 10px;
         }
-    
+
         .navbar-toggler {
             border: none;
             background: none;
         }
-    
+
         .navbar-toggler-icon {
             width: 30px;
             height: 3px;
@@ -70,7 +70,7 @@
             position: relative;
             display: inline-block;
         }
-    
+
         .navbar-toggler-icon::before,
         .navbar-toggler-icon::after {
             content: '';
@@ -80,22 +80,22 @@
             position: absolute;
             left: 0;
         }
-    
+
         .navbar-toggler-icon::before {
             top: -8px;
         }
-    
+
         .navbar-toggler-icon::after {
             bottom: -8px;
         }
-    
+
         .navbar-collapse {
             background-color: black;
             position: absolute;
             top: 50px;
             right: 10px;
         }
-    
+
         .navbar-nav .nav-link {
             color: #e7e4d1 !important;
             font-size: 1rem;
@@ -103,11 +103,11 @@
             padding: 5px 10px;
             transition: color 0.3s ease-in-out;
         }
-    
+
         .nav-link:hover {
             color: #e7e4d1;
         }
-    
+
         .social-icons {
             position: fixed;
             bottom: 20px;
@@ -116,173 +116,188 @@
             display: flex;
             gap: 15px;
         }
-    
+
         .social-icons img {
             width: 50px;
             height: 50px;
             cursor: pointer;
         }
-    
+
         #about {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             padding: 50px 10%;
             background-color: #e7e4d1;
             min-height: 100vh;
         }
-    
+
         #about .about-text {
-            flex: 1 1 100%;
-            max-width: 100%;
+            flex: 1;
+            max-width: 40%;
             text-transform: uppercase;
             font-size: 1.5rem;
-            text-align: center;
+        }
+
+        #about .about-text h2 {
+            font-size: 4rem;
+            font-weight: bold;
+            letter-spacing: 5px;
             margin-bottom: 20px;
         }
-    
-        #about .about-text h2 {
-            font-size: 3rem;
-            font-weight: bold;
-            letter-spacing: 3px;
+
+        #about .about-text p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.5;
         }
-    
+
         #about .photo-gallery {
-            flex: 1 1 100%;
-            max-width: 100%;
+            flex: 1;
+            max-width: 50%;
             position: relative;
-            height: auto;
+            height: 400px;
             overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
-    
+
         #about .photo-gallery img {
+            position: absolute;
             width: 100%;
-            max-width: 300px;
-            height: auto;
+            height: 100%;
             object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        #about .photo-gallery img.active {
             opacity: 1;
         }
-    
+
         #artists {
             display: flex;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
             padding: 50px 10%;
             background-color: #000;
-            min-height: 100vh;
+            height: 100vh;
         }
-    
+
         .artists-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
             flex: 1;
-        }
-    
-        .column {
             display: flex;
-            flex-wrap: wrap;
             gap: 10px;
-            justify-content: center;
+            height: 100%;
         }
-    
+
+        .column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 100%;
+        }
+
         .rectangle {
-            flex: 1 1 calc(45% - 10px);
-            max-width: 300px;
-            height: auto;
+            flex: 1;
             position: relative;
             overflow: hidden;
-            margin-bottom: 20px;
         }
-    
+
         .rectangle img {
             position: absolute;
             width: 100%;
             height: 100%;
             object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .rectangle img.active {
             opacity: 1;
         }
-    
+
         .artists-text {
-            flex: 1 1 100%;
-            max-width: 100%;
+            flex: 1;
+            max-width: 40%;
             text-transform: uppercase;
             font-size: 1.5rem;
             color: #e7e4d1;
-            text-align: center;
-            margin-top: 20px;
+            margin-left: 30px;
         }
-    
+
         .artists-text h2 {
-            font-size: 3rem;
+            font-size: 4rem;
             font-weight: bold;
             letter-spacing: 5px;
             margin-bottom: 20px;
         }
-    
+
         .artists-text p {
             font-size: 1.2rem;
             line-height: 1.5;
         }
-    
+
+        /* Responsive Media Query for Medium Devices */
+        @media (max-width: 1024px) {
+            .fullscreen h1 {
+                font-size: 6rem;
+            }
+
+            #about {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #artists {
+                flex-direction: column;
+            }
+
+            .navbar-collapse {
+                position: static;
+            }
+        }
+
         /* Responsive Media Query for Small Devices */
         @media (max-width: 768px) {
             .fullscreen h1 {
                 font-size: 4rem;
-                letter-spacing: 2px;
             }
-    
-            #about .about-text h2 {
-                font-size: 2.5rem;
-            }
-    
+
             .rectangle {
-                flex: 1 1 calc(100% - 20px);
-                height: auto;
+                height: 150px;
             }
-    
+
+            .artists-gallery {
+                flex-wrap: wrap;
+            }
+
             .social-icons img {
                 width: 40px;
                 height: 40px;
             }
         }
-    
+
         /* Responsive Media Query for Extra Small Devices */
         @media (max-width: 480px) {
             .fullscreen h1 {
-                font-size: 3rem;
-                letter-spacing: 1px;
-            }
-    
-            .social-icons {
-                flex-direction: column;
-                bottom: 10px;
-                right: 10px;
-            }
-    
-            .artists-text h2 {
                 font-size: 2.5rem;
             }
-    
+
             .rectangle {
-                width: 100%;
-                height: auto;
+                height: 120px;
             }
-    
-            #about .photo-gallery img {
-                max-width: 100%;
+
+            .social-icons {
+                flex-direction: column;
+                gap: 10px;
             }
         }
     </style>
-    
     
 </head>
 
