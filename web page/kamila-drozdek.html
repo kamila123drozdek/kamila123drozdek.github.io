@@ -15,6 +15,128 @@
         }
 
         
+    /* Other styles remain the same */
+
+    @media (max-width: 768px) {
+        /* Fullscreen Section */
+        .fullscreen {
+            height: 70vh;
+        }
+
+        .fullscreen h1 {
+            font-size: 3rem;
+            letter-spacing: 3px;
+            margin: 10px;
+        }
+
+        /* Navbar Adjustments */
+        .navbar {
+            padding: 5px 15px;
+        }
+
+        .navbar-toggler-icon {
+            width: 20px;
+            height: 3px;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 5px 5px;
+        }
+
+        /* About Section */
+        #about {
+            padding: 20px 5%;
+            text-align: center;
+        }
+
+        #about .about-text h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        #about .about-text p {
+            font-size: 1rem;
+        }
+
+        #about .photo-gallery {
+            height: 200px;
+        }
+
+        #about .photo-gallery img {
+            object-fit: cover;
+        }
+
+        /* Artists Section */
+        #artists {
+            flex-direction: column;
+            padding: 20px 5%;
+        }
+
+        .artists-gallery {
+            flex-wrap: wrap;
+        }
+
+        .column {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .rectangle {
+            flex: none;
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        .artists-text {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .artists-text h2 {
+            font-size: 3rem;
+        }
+
+        .artists-text p {
+            font-size: 1rem;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            bottom: 20px;
+            right: 10px;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .fullscreen h1 {
+            font-size: 2rem;
+            letter-spacing: 2px;
+        }
+
+        #about .about-text h2,
+        .artists-text h2 {
+            font-size: 2rem;
+        }
+
+        #about .about-text p,
+        .artists-text p {
+            font-size: 0.9rem;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 0.8rem;
+        }
+    }
+
+
         .fullscreen {
             position: relative;
             width: 100%;
