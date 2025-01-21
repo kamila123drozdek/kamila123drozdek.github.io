@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection Sound</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/tm-image"></script>
+</head>
+<body>
+    <h1>Object Detection Sound</h1>
+    <video id="webcam" autoplay playsinline></video>
+    <script>
+        let model, webcam;
+        let labelContainer;
+        let maxPredictions;
+        
+        // Load the model
+        async function init() {
+            const modelURL = "https://teachablemachine.withgoogle.com/models/nJVRJFN8l//model.json";
+            const metadataURL = "YOUR_MODEL_URL/metadata.json";
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+
+            // Setup the webcam
+            const flip = true; 
+            webcam = new tmImage.Webcam(400, 400, flip);
+            await webcam.setup();
+            await webcam.play();
+            document.body.appendChild(webcam.canvas);
+            window.requestAnimationFrame(loop);
+
+            labelContainer = document.createElement("div");
+            document.body.appendChild(labelContainer);
+        }
+
+        async function loop() {
+            webcam.update();
+            await predict();
+            window.requestAnimationFrame(loop);
+        }
+
+        async function predict() {
+            const prediction = await model.predict(webcam.canvas);
+            let highestConfidence = 0;
+            let detectedClass = -1;
+
+            for (let i = 0; i < maxPredictions; i++) {
+                if (prediction[i].probability > highestConfidence) {
+                    highestConfidence = prediction[i].probability;
+                    detectedClass = i;
+                }
+            }
+
+            // Play sound based on detected class
+            if (detectedClass === 0) {
+                playSound('sound1.mp3');
+            } else if (detectedClass === 1) {
+                playSound('sound2.mp3');
+            } else if (detectedClass === 2) {
+                playSound('sound3.mp3');
+            }
+        }
+
+        function playSound(soundFile) {
+            let audio = new Audio(soundFile);
+            audio.play();
+        }
+
+        init();
+    </script>
+</body>
+</html>
